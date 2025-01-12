@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/ashwini-portfolio/static/css/main.ae30b403.css",
+    "main.css": "/ashwini-portfolio/static/css/main.7a035092.css",
     "main.js": "/ashwini-portfolio/static/js/main.28518c24.js",
     "static/media/real-estateLogo.jpg": "/ashwini-portfolio/static/media/real-estateLogo.690522a604a032dc28f9.jpg",
     "static/media/aboutLogo.png": "/ashwini-portfolio/static/media/aboutLogo.6f8431d6b2027ee92f13.png",
@@ -9,11 +9,11 @@
     "static/media/home.png": "/ashwini-portfolio/static/media/home.9e827b9fdcf0289e5f40.png",
     "static/media/projectLogo.jpg": "/ashwini-portfolio/static/media/projectLogo.f7f973c746e8cf03ce5e.jpg",
     "index.html": "/ashwini-portfolio/index.html",
-    "main.ae30b403.css.map": "/ashwini-portfolio/static/css/main.ae30b403.css.map",
+    "main.7a035092.css.map": "/ashwini-portfolio/static/css/main.7a035092.css.map",
     "main.28518c24.js.map": "/ashwini-portfolio/static/js/main.28518c24.js.map"
   },
   "entrypoints": [
-    "static/css/main.ae30b403.css",
+    "static/css/main.7a035092.css",
     "static/js/main.28518c24.js"
   ]
 }
