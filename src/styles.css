@@ -1,0 +1,545 @@
+.section {
+    padding: 100px 0; /* Add spacing for each section */
+    height: 100vh; /* Full viewport height for each section */
+  }
+  
+  html {
+    scroll-behavior: smooth; /* Smooth scrolling behavior */
+  }
+  
+/* Ensure .navbar uses Flexbox to center its content */
+.navbar {
+    display: flex;
+    justify-content: center;  /* This centers the items horizontally in the navbar */
+    align-items: center;      /* This aligns items vertically in the middle */
+    width: 100%;              /* Ensure navbar takes full width */
+  }
+  
+  /* Ensure navbar items are displayed in a row */
+  .navbar-nav {
+    display: flex;
+    justify-content: center;  /* Ensure navbar items are centered horizontally */
+    flex-direction: row;      /* Keep navbar items in a row */
+    width: 100%;              /* Ensure nav items take full width */
+  }
+  
+  /* Make the navbar items horizontally aligned */
+  .navbar-nav .nav-item {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+  
+  /* Navbar item links - ensure they are visible and the right size */
+  .navbar-nav .nav-link {
+    font-size: 1rem;
+    text-align: center;
+    padding: 0px 0;
+    color: #333;
+  }
+
+  .navbar-logo {
+    height: 60px; /* Adjust based on your preferred size */
+    width: auto; /* Maintain aspect ratio */
+  }
+  
+  .navbar-brand {
+    margin-right: 20px; /* Add space between the logo and navbar links */
+  }
+  
+  
+  .navbar-nav .nav-link:hover {
+    color: #ff8c00; /* Adjust hover color for the navbar links */
+  }
+  
+  .navbar-light .navbar-nav .nav-link {
+    color: #333 !important; /* Force a dark color to navbar links */
+  }
+  
+  /* Navbar background color */
+  .navbar.bg-white {
+    background-color: white !important;
+  }
+
+  /* Style for the active link */
+.navbar-nav .nav-link.active {
+    font-weight: bold;  /* Increase font weight when the link is active */
+    color: #ff8c00;     /* Optional: Change text color to highlight it when active */
+  }
+  
+  .navbar-nav .nav-link {
+    font-size: 1rem;
+    padding: 10px 0;
+    color: #333;
+  }
+
+  /* Styling for the email section */
+.email-section {
+  font-size: 1rem;
+  color: #333; /* Text color */
+}
+
+.email-icon {
+  font-size: 1.2rem; /* Slightly larger icon */
+  color: #0c0700; /* Saffron color */
+}
+
+.email-text {
+  text-decoration: none;
+  font-weight: normal;
+  color: #333; /* Match the text color of other navbar items */
+}
+
+.navbar-email {
+  display: flex;
+  align-items: center;
+  margin-top: 10px; /* Adds space between logo and email */
+}
+
+.navbar-email span {
+  font-size: 14px;
+  color: #333;
+}
+
+  
+  
+  /* For mobile responsiveness (collapsed navbar) */
+  @media (max-width: 767px) {
+    .navbar-nav {
+      flex-direction: column; /* Stack navbar items vertically on mobile */
+      align-items: center; /* Center them horizontally */
+    }
+  }
+  
+  
+/* Basic reset for sections */
+.home-section {
+    display: flex;
+    align-items: flex-start;  /* Align items to the top */
+    justify-content: space-around;
+    padding: 50px 20px;
+    text-align: center;
+    position: relative;
+  }
+
+  .home-section::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: black;
+    height: 30%; /* Make the image cover only the bottom half */
+    /* background-image: url('../src/images/projectLogo.jpg'); */
+    background-size: cover; /* Make sure the image covers the full width */
+    background-position: center; /* Keep image center aligned */
+    z-index: -1; /* Make sure the image stays behind the content */
+  }
+
+/* Ensure global sections like home use border-box */
+.home-section, 
+.home-section *::before, 
+.home-section *::after {
+  box-sizing: border-box; /* Preserve border-box in other sections */
+}
+
+/* Wrapper for the combined left + middle sections */
+.left-middle-section-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  /* Adjust the size of the left and middle section container */
+  .left-section-fun-shape {
+    width: 500px;
+    height: 400px;
+    background-color: #d3d3d3; /* Light grey */
+    border-radius: 80% 60% 50% 70% / 90% 80% 40% 60%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    margin: auto;
+    padding-left: 18px;  /* Ensure proper padding on the left */
+    padding-right: 20px;
+  }
+  
+  .left-section-right {
+    margin-left: 20px;  /* Spacing between image and text */
+    text-align: left;
+  }
+
+  .image-circle {
+    position: relative; /* Enables absolute positioning for the image */
+    width: 500px;
+    height: 350px;
+    background-color: #d3d3d3; /* Light grey */
+    border-radius: 80% 60% 50% 70% / 90% 80% 40% 60%; /* Fun shape */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: auto;
+  }
+  
+  .image-circle img {
+    position: absolute; /* Move image independently of the circle */
+    width: 400px;
+    height: auto;
+    left: -50px; /* Move slightly outside to the left */
+  }
+
+  .left-section {
+    position: relative;
+    top: -50px; /* Moves the text upwards closer to the top of the shape */
+    left: 0; /* Ensure it stays horizontally aligned */
+  }
+  
+  .hi-text {
+    font-size: 2.0rem;
+    font-weight: normal;
+    color: #ff0000;
+    margin-bottom: 5px; /* Reduce space between Hi and Ashwini */
+    margin-top: -100px;
+  }
+  
+  .name-text {
+    font-size: 3rem;
+    font-weight: bold;
+    color: #0b0b3b;
+    margin-top: 0;
+  }
+  
+  .saffron-line {
+    border-bottom: 4px solid #ff0000;
+    width: 50%;
+    margin-top: 5px; /* Slightly closer to Ashwini text */
+  }
+  
+  /* Right Section Styling */
+  /* Styling for the right section (slightly bigger) */
+.right-section {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 5px;
+  }
+  
+  .right-section h2 {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: #0b0b3b; /* New color for Software Engineer */
+  }
+  
+  .right-section .description {
+    font-size: 1rem;
+    color: #333; /* Dark color */
+    margin-top: 10px;
+    margin-bottom: 20px;
+    max-width: 350px;
+    margin-top: 20px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  /* Styling for the buttons container */
+.buttons-container {
+  display: flex;
+  gap: 10px; /* Decreased gap between buttons */
+  justify-content: center; /* Centers the buttons horizontally */
+  margin-top: 20px; /* Optional: Add some space from the other content */
+}
+
+/* Styling for the Contact Me button */
+.contact-btn {
+  background-color: #f83030; /* Saffron color */
+  color: black;
+  border-radius: 25px 25px 25px 25px; /* Curved left and right */
+  padding: 10px 25px; /* Padding for button size */
+  font-weight: normal;
+  font-size: 1rem;
+  border: none; /* No border */
+}
+
+/* Styling for the Download Resume button */
+.download-btn {
+  background-color: black;
+   /* Saffron color for the text */
+  border-radius: 25px 25px 25px 25px;   /* Rounded edges on left and right */
+  padding: 10px 25px; /* Padding for button size */
+  font-weight: bold;
+  font-size: 1rem;
+  border: 2px solid black; /* Saffron border */
+}
+
+.download-btn .color{
+  color: #f83030;
+  font-weight: 500;
+}
+
+
+  /* Responsive Design - Mobile Adjustments */
+  @media (max-width: 767px) {
+    .home-section {
+      flex-direction: column;
+    }
+
+    .contact-btn{
+      color: #ddd;
+    }
+
+    .download-btn{
+      background-color: white;
+      border: 2px solid #f83030;
+    }
+
+    .home-section::after {
+      display: none; /* Remove the black top half */
+    }
+  
+    .left-section, .middle-section, .right-section {
+      margin-bottom: 30px;
+    }
+  }
+
+  /* General padding between sections */
+.section {
+  padding: 50px 0; /* Ensure consistent spacing for all sections */
+}
+
+/* Padding for about section */
+.about-section {
+  margin-top: 20px;
+  margin-bottom: 20px;
+  /* background-color: #1d150d;
+  height: 550px; */
+}
+
+  
+/* About Section Wrapper */
+.about-section {
+  position: relative;
+  padding: 50px 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.about-section::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 30%; /* Top half of the section */
+  background-image: url('../src/images/projectLogo.jpg');
+  z-index: -1; /* Ensure the pseudo-element is behind the content */
+}
+
+/* Scope box-sizing override only to about-box */
+.about-box, 
+.about-box *::before, 
+.about-box *::after {
+  box-sizing: content-box;
+}
+
+
+/* About Box (Rectangle) */
+.about-box {
+  display: flex;
+  flex-direction: row;
+  background-color: #d3d3d3; /* Light Grey */
+  width: 100%;
+  max-width: 1100px;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  margin-bottom: 30px;
+}
+
+/* Left Section */
+.left-section {
+  flex: 1 1 40%; /* 40% width for the left section */
+  margin-right: 20px;
+  overflow: hidden;  /* Hide anything that goes outside */
+}
+
+.about-image {
+  width: 100%; /* Ensures the image takes full width */
+  height: 100%;  /* Ensures the image takes full height of its parent */
+  object-fit: cover; /* Maintain aspect ratio but cover the entire space */
+  border-radius: 8px;
+}
+
+/* Right Section */
+.right-section {
+  flex: 1 1 60%; /* 60% width for the right section */
+}
+
+.right-section h2 {
+  font-size: 2.5rem;
+  font-weight: bold;
+  margin-bottom: 3px;
+  color: #333;
+  margin-bottom: 3px;
+}
+
+.right-section p {
+  font-size: 1rem;
+  color: #555;
+  line-height: 1.6;
+  max-width: 90%;
+  margin-top: 10px;
+}
+
+.pill {
+  display: inline-block;
+  background-color: #3c3c6b;   /* Saffron color or any color you prefer */
+  color: white;
+  padding: 4px 7px;
+  border-radius: 20px;  /* Rounded corners to make it pill-shaped */
+  margin-right: 5px;
+  margin-left: 5px;
+  font-size: 1rem;  /* Adjust the font size */
+  margin-bottom: 5px;
+}
+
+
+/* Media Query for Small Screens */
+@media (max-width: 767px) {
+  .about-box {
+    flex-direction: column;  /* Stack the left and right sections vertically */
+    padding: 10px;
+    max-height: 1100px;
+    gap: 20px; /* Add gap between elements to avoid overlap */
+    max-height: auto;
+  }
+
+  .about-section::before {
+    display: none; /* Remove the black top half */
+  }
+
+  .about-box {
+    flex-direction: column;
+    padding: 10px;
+  }
+
+  .left-section {
+    flex: 1 1 100%; /* Make left section full width */
+    margin-bottom: 20px;
+  }
+
+  .right-section {
+    flex: 1 1 100%; /* Make right section full width */
+    /* height: 100px; */
+  }
+  
+  .about-image {
+    height: 300px; /* Adjust height of the image on smaller screens */
+    object-fit: cover;
+  }
+}
+/* General styling for all cards */
+.card {
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  text-align: center;
+  padding: 15px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  margin: 10px auto;
+  background-color: #f5f5f5 !important;
+}
+
+.card1 {
+  margin-top: 90px;
+  border: none; /* Remove the border for Card 1 */
+  box-shadow: none; /* Remove any shadow if applied */
+}
+
+/* Styling for Card 1 text */
+.card1 h1 {
+  font-size: 2rem; /* Size of the heading */
+  font-weight: bold;
+  color: #0b0b3b; /* Dark blue color */
+  margin-bottom: 10px; /* Add some spacing below the heading */
+}
+
+.card1 p {
+  font-size: 1rem; /* Standard font size */
+  color: #555; /* Gray color */
+  margin-top: 0; /* Remove default margin above */
+}
+
+.project-img {
+  width: 1150px;
+  height: 1150px;
+}
+
+/* Specific card sizes */
+.card1,
+.card4 {
+  width: 300px;
+  height: 250px;
+}
+
+.card2,
+.card3, .card4{
+  width: 500px;
+  height: 400px;
+}
+
+.card4 {
+  margin-left: 10px;
+}
+
+.card img {
+  width: 100%;   /* Make the image take full width of the card */
+  height: 50%;  /* Maintain aspect ratio of the image */
+  border-radius: 8px;  /* Ensure the image has rounded corners */
+  margin-bottom: 30px;
+}
+
+.card1 img, .card2 img, .card3 img {
+  object-fit: cover;  /* Keep the aspect ratio, but cover the card size */
+}
+
+/* Grid layout */
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(2, auto); /* 2 columns */
+  gap: 20px; /* Spacing between cards */
+  justify-content: center;
+  background-color: #d3d3d3;
+}
+
+/* Responsive Design */
+@media (max-width: 767px) {
+  .projects-grid {
+    grid-template-columns: 1fr; /* Stack cards vertically */
+    gap: 10px;
+    margin-top: 100px;
+  }
+
+  img{
+    height: 1100px;
+    width: 100px;
+  }
+
+  .card img {
+    width: 100%;  /* Make the image responsive for smaller screens */
+    height: auto;
+    object-fit: cover; /* Adjust the image fill for mobile if needed */
+  }
+
+  .card1{
+    width: 250px;
+    height: 200px;
+  }
+
+  .card2,
+  .card3, .card4 {
+    width: 400px;
+    height: 350px;
+  }
+}
